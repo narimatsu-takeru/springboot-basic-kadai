@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring Bootの基礎を学ぼう</title>
+</head>
+<body>
+	<h2>ToDoリスト</h2>
+	<table border = "1">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>タイトル</th>
+				<th>優先度</th>
+				<th>ステータス</th>>
+			</tr>	
+		</thead>
+		<tbody>
+			<tr th:each = "toDo : ${todos}">
+				<td th:text = ${toDo.getId}></td>
+				<td th:text = ${toDo.getTitle}></td>
+				<td th:text = ${toDo.getPriority}></td>
+				<td th:text = ${toDo.getStatus}></td>
+																
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
